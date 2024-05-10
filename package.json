@@ -1,0 +1,19 @@
+{
+  "name": "datetime-epoch",
+  "version": "1.0.0",
+  "description": "A library used to convert datetime to epoch time and vice versa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "datetime",
+    "epoch",
+    "time",
+    "date",
+    "datetimetoepoch",
+    "epochtodatetime"
+  ],
+  "author": "sogobanwo",
+  "license": "ISC"
+}
