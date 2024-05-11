@@ -24,7 +24,7 @@ Convert user-inputted datetime strings to Unix timestamps for server-side proces
 Convert Unix timestamps from server responses to human-readable datetime strings for display
 Simplify datetime calculations and conversions in your JavaScript applications and solidity smart contracts
 
-##Getting Started
+## Getting Started
 To use datetime-epoch, simply install it via npm:
 
 ```
@@ -58,7 +58,7 @@ function DatetimeEpoch() {
     //   time: time (e.g 14:30:00)}
   
   }
-  return (
+   return (
     <>
     <div>
       <h2>DateTime to Epoch Converter</h2>
