@@ -12,7 +12,9 @@
     "time",
     "date",
     "datetimetoepoch",
-    "epochtodatetime"
+    "epochtodatetime",
+    "blockchain",
+    "web3"
   ],
   "author": "sogobanwo",
   "license": "ISC"
