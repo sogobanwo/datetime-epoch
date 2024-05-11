@@ -1,25 +1,25 @@
 # <h1 align="center"> datetime-epoch </h1>
 
-##Introduction
+## Introduction
 
 **datetime-epoch** is a tiny JavaScript library that provides two essential functions for converting between datetime strings and Unix timestamps. With its simple and intuitive API, you can easily switch between human-readable datetime formats and machine-friendly Unix timestamps.
 
-##Problem Statement
+## Problem Statement
 When working with dates and times in JavaScript (most especially solidity), you often need to convert between different formats. Datetime strings are easy for humans to read and understand, but machines/smart contracts prefer Unix timestamps, which represent the number of seconds since January 1, 1970, at 00:00:00 UTC. Converting between these formats can be cumbersome and error-prone, especially when sending and receiving dates smart contracts, working with different time zones and leap seconds.
 
-##Solution
+## Solution
 datetime-epoch solves this problem by providing two simple functions:
 **datetimeToEpochTime(datetimeInput)**: converts a datetime string to a Unix timestamp (epochTime)
 **epochToDatetime(epochInput):** converts a Unix timestamp to a datetime object of time, day, month, year, date and datetime
 With these functions, you can easily convert between datetime strings and Unix timestamps, making it easier to work with dates and times in your JavaScript applications.
 
-##Features
+## Features
 - Converts datetime strings to Unix timestamps
 - Converts Unix timestamps to datetime objects
 - Supports tree shaking with ES modules
 - No external script loading, no dependencies on SDKs
 
-##Use Cases
+## Use Cases
 Convert user-inputted datetime strings to Unix timestamps for server-side processing
 Convert Unix timestamps from server responses to human-readable datetime strings for display
 Simplify datetime calculations and conversions in your JavaScript applications and solidity smart contracts
@@ -33,18 +33,15 @@ Then, import the functions into your JavaScript file:
 ``
 import React, { useState } from 'react';
 const { datetimeToEpochTime, epochToDatetime } = require('datetime-epoch');
-
 function DatetimeEpoch() {
   const [datetimeInput, setDatetimeInput] = useState('');
   const [epochInput, setEpochInput] = useState(0)
-
   const convertToEpoch = () => {
    const res = datetimeToEpochTime(datetimeInput)
    console.log(res)
   //  sample res
   //  res = epochTime (e.g 12389089)
   };
-
   const convertToDateObject = () => {
     const response = epochToDatetime(epochInput)
     console.log(response)
@@ -71,8 +68,6 @@ function DatetimeEpoch() {
       />
       <button onClick={convertToEpoch}>Convert</button>
     </div>
-    
-
     <div>
         <h2>Epoch to Date Object Converter</h2>
         <label htmlFor='epochInput'>Enter Epoch time</label>
@@ -87,8 +82,10 @@ function DatetimeEpoch() {
     </>
   );
 }
-
 export default DatetimeEpoch;
 ``
+
+# KeyWords
+Solidity smart contract conversion epoch unix timestamp blockchain 
 
 Now you're ready to start converting between datetime strings and Unix timestamps with ease!
