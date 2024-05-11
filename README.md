@@ -26,11 +26,14 @@ Simplify datetime calculations and conversions in your JavaScript applications a
 
 ##Getting Started
 To use datetime-epoch, simply install it via npm:
-``
+
+```
 npm install datetime-epoch
-``
+```
+
 Then, import the functions into your JavaScript file:
-``
+
+```
 import React, { useState } from 'react';
 const { datetimeToEpochTime, epochToDatetime } = require('datetime-epoch');
 function DatetimeEpoch() {
@@ -83,7 +86,7 @@ function DatetimeEpoch() {
   );
 }
 export default DatetimeEpoch;
-``
+```
 
 # KeyWords
 Solidity smart contract conversion epoch unix timestamp blockchain 
