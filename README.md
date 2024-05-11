@@ -24,12 +24,14 @@ Convert user-inputted datetime strings to Unix timestamps for server-side proces
 Convert Unix timestamps from server responses to human-readable datetime strings for display
 Simplify datetime calculations and conversions in your JavaScript applications and solidity smart contracts
 
-##Getting Started
+## Getting Started
 To use datetime-epoch, simply install it via npm:
 ``
 npm install datetime-epoch
 ``
 Then, import the functions into your JavaScript file:
+
+
 ``
 import React, { useState } from 'react';
 const { datetimeToEpochTime, epochToDatetime } = require('datetime-epoch');
@@ -55,6 +57,9 @@ function DatetimeEpoch() {
     //   time: time (e.g 14:30:00)}
   
   }
+  ``
+  
+  ``
   return (
     <>
     <div>
