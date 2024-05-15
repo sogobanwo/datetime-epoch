@@ -1,5 +1,5 @@
 {
-  "name": "datetime-epoch",
+  "name": "datetime-epoch-conversion",
   "version": "1.0.0",
   "description": "A library used to convert datetime to epoch time and vice versa",
   "main": "index.js",
