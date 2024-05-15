@@ -1,10 +1,12 @@
 {
   "name": "datetime-epoch-conversion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A library used to convert datetime to epoch time and vice versa",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "datetime",
@@ -14,8 +16,13 @@
     "datetimetoepoch",
     "epochtodatetime",
     "blockchain",
-    "web3"
+    "web3",
+    "Unix"
   ],
   "author": "sogobanwo",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
 }
