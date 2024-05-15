@@ -9,9 +9,10 @@ When working with dates and times in JavaScript (most especially solidity), you 
 
 ## Solution
 datetime-epoch solves this problem by providing two simple functions:
+**dateToEpochTime(dateInput)**: converts a date string to a Unix timestamp (epochTime)
 **datetimeToEpochTime(datetimeInput)**: converts a datetime string to a Unix timestamp (epochTime)
 **epochToDatetime(epochInput):** converts a Unix timestamp to a datetime object of time, day, month, year, date and datetime
-With these functions, you can easily convert between datetime strings and Unix timestamps, making it easier to work with dates and times in your JavaScript applications.
+With these functions, you can easily convert between datetime & date strings and Unix timestamps, making it easier to work with dates and times in your JavaScript applications.
 
 ## Features
 - Converts datetime strings to Unix timestamps
@@ -35,16 +36,29 @@ Then, import the functions into your JavaScript file:
 
 ```
 import React, { useState } from 'react';
-const { datetimeToEpochTime, epochToDatetime } = require('datetime-epoch');
+const { datetimeToEpochTime, epochToDatetime, dateToEpochTime } = require('datetime-epoch');
 function DatetimeEpoch() {
+
+  const [date, setDate] = useState('')
+
   const [datetimeInput, setDatetimeInput] = useState('');
+
   const [epochInput, setEpochInput] = useState(0)
-  const convertToEpoch = () => {
-   const res = datetimeToEpochTime(datetimeInput)
-   console.log(res)
+
+  const convertDateTimeToEpoch = () => {
+    const res = datetimeToEpochTime(datetimeInput)
+    console.log(res)
   //  sample res
   //  res = epochTime (e.g 12389089)
   };
+
+  const convertDateToEpoch = () => {
+    const res = dateToEpochTime(dateInput)
+    console.log(res)
+  //  sample res
+  //  res = epochTime (e.g 12389089)
+  };
+
   const convertToDateObject = () => {
     const response = epochToDatetime(epochInput)
     console.log(response)
@@ -60,6 +74,7 @@ function DatetimeEpoch() {
   }
    return (
     <>
+
     <div>
       <h2>DateTime to Epoch Converter</h2>
       <label htmlFor="datetimeInput">Enter a datetime:</label>
@@ -69,8 +84,21 @@ function DatetimeEpoch() {
         value={datetimeInput}
         onChange={(e) => setDatetimeInput(e.target.value)}
       />
-      <button onClick={convertToEpoch}>Convert</button>
+      <button onClick={convertDateTimeToEpoch}>Convert</button>
     </div>
+
+   <div>
+      <h2>Date to Epoch Converter</h2>
+      <label htmlFor="datetimeInput">Enter a date:</label>
+      <input
+        type="date"
+        id="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+      />
+      <button onClick={convertDateToEpoch}>Convert</button>
+    </div>
+
     <div>
         <h2>Epoch to Date Object Converter</h2>
         <label htmlFor='epochInput'>Enter Epoch time</label>
@@ -88,4 +116,4 @@ function DatetimeEpoch() {
 export default DatetimeEpoch;
 ```
 
-Now you're ready to start converting between datetime strings and Unix timestamps with ease!
+Now you're ready to start converting between datetime and date strings and Unix timestamps with ease!
