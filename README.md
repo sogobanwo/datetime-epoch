@@ -88,7 +88,4 @@ function DatetimeEpoch() {
 export default DatetimeEpoch;
 ```
 
-# KeyWords
-Solidity smart contract conversion epoch unix timestamp blockchain 
-
 Now you're ready to start converting between datetime strings and Unix timestamps with ease!
