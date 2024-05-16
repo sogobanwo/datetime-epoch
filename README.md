@@ -1,8 +1,8 @@
-# <h1 align="center"> datetime-epoch </h1>
+# <h1 align="center">datetime-epoch-conversion</h1>
 
 ## Introduction
 
-**datetime-epoch** is a tiny JavaScript library that provides two essential functions for converting between datetime strings and Unix timestamps. With its simple and intuitive API, you can easily switch between human-readable datetime formats and machine-friendly Unix timestamps.
+**datetime-epoch-conversion** is a tiny JavaScript library that provides two essential functions for converting between datetime & date strings and Unix timestamps. With its simple and intuitive API, you can easily switch between human-readable datetime formats and machine-friendly Unix timestamps.
 
 ## Problem Statement
 When working with dates and times in JavaScript (most especially solidity), you often need to convert between different formats. Datetime strings are easy for humans to read and understand, but machines/smart contracts prefer Unix timestamps, which represent the number of seconds since January 1, 1970, at 00:00:00 UTC. Converting between these formats can be cumbersome and error-prone, especially when sending and receiving dates smart contracts, working with different time zones and leap seconds.
@@ -21,7 +21,7 @@ With these functions, you can easily convert between datetime & date strings and
 - No external script loading, no dependencies on SDKs
 
 ## Use Cases
-Convert user-inputted datetime strings to Unix timestamps for server-side processing
+Convert user-inputted datetime and date strings to Unix timestamps for server-side processing
 Convert Unix timestamps from server responses to human-readable datetime strings for display
 Simplify datetime calculations and conversions in your JavaScript applications and solidity smart contracts
 
@@ -29,14 +29,14 @@ Simplify datetime calculations and conversions in your JavaScript applications a
 To use datetime-epoch, simply install it via npm:
 
 ```
-npm install datetime-epoch
+npm i datetime-epoch-conversion
 ```
 
 Then, import the functions into your JavaScript file:
 
 ```
 import React, { useState } from 'react';
-const { datetimeToEpochTime, epochToDatetime, dateToEpochTime } = require('datetime-epoch');
+const { datetimeToEpochTime, epochToDatetime, dateToEpochTime } = require('datetime-epoch-conversion');
 function DatetimeEpoch() {
 
   const [date, setDate] = useState('')
