@@ -1,24 +1,6 @@
-interface EpochTimeResult {
-  day: number;
-  month: string;
-  year: number;
-  date: string;
-  dateTime: string;
-  time: string;
-}
+import { EpochTimeResult } from "./dtypes";
 
-const datetimeToEpochTime = (datetimeInput: string): number => {
-  const epochTime = new Date(datetimeInput).getTime() / 1000;
-  console.log(epochTime);
-  return epochTime;
-};
-
-const dateToEpochTime = (dateInput: string): number => {
-  const epochTime = new Date(`${dateInput}T00:00`).getTime() / 1000;
-  return epochTime
-}
-
-const epochToDatetime = (epochInput: string): EpochTimeResult => {
+export const epochToDatetime = (epochInput: string): EpochTimeResult => {
   // Convert epoch time to local date
   const localDate = new Date(parseFloat(epochInput) * 1000);
 
@@ -71,5 +53,3 @@ const epochToDatetime = (epochInput: string): EpochTimeResult => {
   };
   return result;
 };
-
-module.exports =  { datetimeToEpochTime, epochToDatetime, dateToEpochTime };
